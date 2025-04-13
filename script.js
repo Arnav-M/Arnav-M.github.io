@@ -6,20 +6,26 @@ function startCountdown(duration) {
 
     let timer = duration, hours, minutes, seconds;
 
-    setInterval(() => {
+    function updateDisplay() {
         hours = Math.floor(timer / (60 * 60));
         minutes = Math.floor((timer % (60 * 60)) / 60);
         seconds = Math.floor(timer % 60);
 
-        hoursElement.textContent = String("").padStart(2, '0');
-        minutesElement.textContent = String("").padStart(2, '0');
-        secondsElement.textContent = String("").padStart(2, '0');
+        hoursElement.textContent = String(hours).padStart(2, '0');
+        minutesElement.textContent = String(minutes).padStart(2, '0');
+        secondsElement.textContent = String(seconds).padStart(2, '0');
 
-        if (--timer < 0) {
-            timer = 0;
+        if (timer > 0) {
+            timer--;
         }
-    }, 1000);
+    }
+
+    // Initial display
+    updateDisplay();
+
+    // Update the countdown every second
+    setInterval(updateDisplay, 1000);
 }
 
-// Start the countdown from 72 hours (3 days * 24 hours)
+// Start countdown from 72 hours (3 days)
 startCountdown(72 * 60 * 60);
