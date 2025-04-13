@@ -1,5 +1,6 @@
 /* styles.css */
 body {
+    font-family: 'Futura PT', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +8,6 @@ body {
     margin: 0;
     background-color: #282c34;
     color: white;
-    font-family: 'Arial', sans-serif;
 }
 
 #countdown {
