@@ -1,13 +1,21 @@
 /* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'Futura PT', Arial, sans-serif; /* Added fallback fonts */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     margin: 0;
     background-color: #000;
     color: white;
+    text-rendering: optimizeLegibility;
 }
 
 #countdown {
@@ -15,27 +23,38 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .time-section {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .time-value {
-    font-size: 20%;
+    font-size: 8rem;
     font-weight: 300;
+    line-height: 1; /* Added to fix vertical alignment */
+    display: flex;
+    justify-content: center;
+    min-width: 120px; /* Added to maintain consistent width */
 }
 
 .colon {
-    font-size: 20%;
+    font-size: 8rem;
+    line-height: 1;
     margin-top: -20px;
     opacity: 0.8;
+    user-select: none; /* Prevent selection */
 }
 
 .time-label {
-    font-size: 20%;
+    font-size: 1rem;
     color: #666;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: -20px;
+    margin-top: 10px;
+    font-weight: 400;
 }
