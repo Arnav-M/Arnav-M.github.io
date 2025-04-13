@@ -55,6 +55,4 @@ startCountdown(80, 30);
 
 // You can call resetCountdown() when you want to restart the timer
 // For example, you could add a button:
-/*
 <button onclick="resetCountdown()">Reset Countdown</button>
-*/
