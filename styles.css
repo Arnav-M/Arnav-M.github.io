@@ -59,7 +59,7 @@ body {
     font-weight: 400;
 }
 
-/* Add to styles.css */
+/* Update in styles.css */
 #resetButton {
     position: fixed;
     bottom: 20px;
@@ -78,26 +78,6 @@ body {
 }
 
 #resetButton:hover {
+    opacity: 1;
     background-color: #444;
-}
-
-/* Show button when hovering over the bottom area of the screen */
-body:hover #resetButton {
-    opacity: 1;
-}
-
-/* Create a hover area at the bottom of the screen */
-#resetButton::before {
-    content: '';
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 100px;
-    pointer-events: none;
-}
-
-/* Show button when hovering over the button itself */
-#resetButton:hover {
-    opacity: 1;
 }
