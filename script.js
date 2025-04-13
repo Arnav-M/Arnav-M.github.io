@@ -11,9 +11,9 @@ function startCountdown(duration) {
         minutes = Math.floor((timer % (60 * 60)) / 60);
         seconds = Math.floor(timer % 60);
 
-        hoursElement.textContent = String(hours).padStart(2, '0');
-        minutesElement.textContent = String(minutes).padStart(2, '0');
-        secondsElement.textContent = String(seconds).padStart(2, '0');
+        hoursElement.textContent = String("").padStart(2, '0');
+        minutesElement.textContent = String("").padStart(2, '0');
+        secondsElement.textContent = String("").padStart(2, '0');
 
         if (--timer < 0) {
             timer = 0;
