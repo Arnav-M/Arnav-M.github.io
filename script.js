@@ -28,4 +28,4 @@ function startCountdown(duration) {
 }
 
 // Start countdown from 72 hours (3 days)
-startCountdown(72 * 60 * 60);
+startCountdown(80 * 60 * 60);
