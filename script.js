@@ -1,19 +1,20 @@
 // script.js
-function startCountdown(duration) {
+function startCountdown(hours, minutes) {
     const hoursElement = document.getElementById('hours');
     const minutesElement = document.getElementById('minutes');
     const secondsElement = document.getElementById('seconds');
 
-    let timer = duration, hours, minutes, seconds;
+    // Convert hours and minutes to total seconds
+    let timer = (hours * 60 * 60) + (minutes * 60);
 
     function updateDisplay() {
-        hours = Math.floor(timer / (60 * 60));
-        minutes = Math.floor((timer % (60 * 60)) / 60);
-        seconds = Math.floor(timer % 60);
+        let remainingHours = Math.floor(timer / (60 * 60));
+        let remainingMinutes = Math.floor((timer % (60 * 60)) / 60);
+        let remainingSeconds = Math.floor(timer % 60);
 
-        hoursElement.textContent = String(hours).padStart(2, '0');
-        minutesElement.textContent = String(minutes).padStart(2, '0');
-        secondsElement.textContent = String(seconds).padStart(2, '0');
+        hoursElement.textContent = String(remainingHours).padStart(2, '0');
+        minutesElement.textContent = String(remainingMinutes).padStart(2, '0');
+        secondsElement.textContent = String(remainingSeconds).padStart(2, '0');
 
         if (timer > 0) {
             timer--;
@@ -27,5 +28,5 @@ function startCountdown(duration) {
     setInterval(updateDisplay, 1000);
 }
 
-// Start countdown from 72 hours (3 days)
-startCountdown(80 * 60 * 60);
+// Start countdown from 80 hours and 30 minutes
+startCountdown(80, 30);
