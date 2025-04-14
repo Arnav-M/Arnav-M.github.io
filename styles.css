@@ -1,83 +1,51 @@
 /* styles.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-
 body {
-    font-family: 'Futura PT', Arial, sans-serif; /* Added fallback fonts */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Changed from height to min-height */
-    margin: 0;
+    font-family: 'Futura PT', Arial, sans-serif;
     background-color: #000;
     color: white;
-    text-rendering: optimizeLegibility;
-}
-
-#countdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.time-section {
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h1, h2 {
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 
 .time-value {
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 300;
-    line-height: 1; /* Added to fix vertical alignment */
-    display: flex;
-    justify-content: center;
-    min-width: 120px; /* Added to maintain consistent width */
-}
-
-.colon {
-    font-size: 8rem;
-    line-height: 1;
-    margin-top: -20px;
-    opacity: 0.8;
-    user-select: none; /* Prevent selection */
-}
-
-.time-label {
-    font-size: 1rem;
-    color: #666;
-    text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 10px;
-    font-weight: 400;
 }
 
-/* Update in styles.css */
-#resetButton {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-family: 'Futura PT', Arial, sans-serif;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: opacity 0.3s ease;
-    opacity: 0; /* Hide the button by default */
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
 }
 
-#resetButton:hover {
-    opacity: 1;
-    background-color: #444;
+.coming-soon {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-top: 20px;
 }
