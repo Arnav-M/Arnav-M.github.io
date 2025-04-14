@@ -45,7 +45,13 @@ h1, h2 {
     margin: 10px 0;
 }
 
+.logo img {
+    width: 40px;  /* Reduced size */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px;
+    opacity: 0.9; /* Optional: slightly reduce opacity to match design */
+}
+
 .logo {
-    font-size: 2rem;
     margin-top: 20px;
 }
